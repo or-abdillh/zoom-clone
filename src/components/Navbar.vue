@@ -1,13 +1,13 @@
 <template>
    <section class="navbar">
-      <a class="nav-box active">
+      <router-link to="/" class="nav-box">
          <i class="fas fa-comment"></i>
          <p>Meet chat</p>
-      </a>
-      <a class="nav-box">
+      </router-link>
+      <router-link to="/meetings" class="nav-box">
          <i class="far fa-clock"></i>
          <p>Meetings</p>
-      </a>
+      </router-link>
       <a class="nav-box">
          <i class="far fa-address-book"></i>
          <p>Contacts</p>
@@ -42,8 +42,15 @@
       padding: .35rem .85rem;
       font-family: 'Roboto', Sans-Serif;
       
-      .active i, .active p {
-         color: $azure;
+      .router-link-active, 
+      router-link-exact-active {
+         color: $azure!important;
+         text-decoration: none;
+      }
+      
+      a {
+         text-decoration: none;
+         
       }
       
       .nav-box {
