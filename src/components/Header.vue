@@ -33,9 +33,6 @@
       }
       
       span {
-         background: $arsenic-sm;
-         padding: .3rem;
-         border-radius: 8px;
          display: grid;
          place-items: center;;
          
