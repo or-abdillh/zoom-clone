@@ -15,7 +15,7 @@
    
    import Header from '../components/Header.vue';
    import MenuBar from '../components/MenuBar.vue';
-   import MainScreen from '../components/Body.vue';
+   import MainScreen from '../components/MainScreen.vue';
    
    export default {
       name: 'Home',
