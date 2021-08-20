@@ -1,32 +1,17 @@
 <template>
-   <Header></Header>
-   <MenuBar></MenuBar>
-   <MainScreen></MainScreen>
+   <Home></Home>
+   <Navbar></Navbar>
 </template>
 
 <script>
    
-   import Header from './components/Header.vue';
-   import MenuBar from './components/MenuBar.vue';
-   import MainScreen from './components/Body.vue';
+   import Home from './views/Home.vue'
+   import Navbar from './components/Navbar.vue'
    
    export default {
-      name: 'App',
       components: {
-         Header,
-         MenuBar,
-         MainScreen
+         Home,
+         Navbar
       }
-   }
-   
+   }   
 </script>
-
-<style lang="scss" >
-   
-   * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-   }
-   
-</style>
