@@ -1,5 +1,12 @@
 <template>
-   <Header></Header>
+   <Header>
+      <template v-slot:title>
+         <p>Meet & chat</p>
+      </template>
+      <template v-slot:icon>
+         <i class="far fa-edit"></i>
+      </template>
+   </Header>
    <MenuBar></MenuBar>
    <MainScreen></MainScreen>
 </template>

@@ -1,8 +1,8 @@
 <template>
    <section class="header">
-      <p>Meet & chat</p>
+      <slot name="title"></slot>
       <span>
-         <i class="far fa-edit"></i>
+         <slot name="icon"></slot>
       </span>
    </section>
 </template>
@@ -19,17 +19,21 @@
       width: 100%;
       padding: .6rem .5rem;
       background: $arsenic;
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-family: 'Roboto', Sans-Serif;
       color: white;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-direction: row-reverse;
+      position: relative;
       
       p {
          text-align: center;
          display: block;
-         transform: translateX(130%);
+         position: absolute;
+         left: 50%;
+         transform: translateX(-50%);
       }
       
       span {
