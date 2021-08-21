@@ -7,6 +7,7 @@
          <i @click="isSlide = !isSlide" class="far fa-edit"></i>
       </template>
    </Header>
+   <SearchBar></SearchBar>
    <NewChat :slide="isSlide" ></NewChat>
    <MenuBar></MenuBar>
    <MainScreen></MainScreen>
@@ -15,6 +16,7 @@
 <script>
    
    import Header from '../components/Header.vue';
+   import SearchBar from '../components/SearchBar.vue';
    import MenuBar from '../components/MenuBar.vue';
    import MainScreen from '../components/MainScreen.vue';
    import NewChat from '../components/NewChat.vue';
@@ -25,7 +27,8 @@
          Header,
          MenuBar,
          MainScreen,
-         NewChat
+         NewChat,
+         SearchBar
       },
       data() {
          return {
