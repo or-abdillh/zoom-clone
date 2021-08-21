@@ -1,26 +1,37 @@
 <template>
    <section class="header-contact">
       <div class="title-wrapper">
-         <p class="active" >Contacts</p>
-         <p >Channels</p>
+         <p
+         :class="content === 'ContactScreen' ? 'active' : ''"
+         @click="content = 'ContactScreen'" >Contacts</p>
+         <p 
+         :class="content === 'ChannelsScreen' ? 'active' : ''"
+         @click="content = 'ChannelsScreen'" >Channels</p>
       </div>
       <i class="fa fa-plus" ></i>
    </section>
-   <SearchBar search-name="Contacts"></SearchBar>
+   <SearchBar search-name="Search contacts"></SearchBar>
+   <component :is="content" ></component>
+   
 </template>
 
 <script>
    
    import SearchBar from '../components/SearchBar.vue';
+   import ContactScreen from '../components/contact/ContactScreen.vue';
+   import ChannelsScreen from '../components/contact/ChannelsScreen.vue';
+   
    
    export default {
       name: 'Contacts',
       components: {
-         SearchBar
+         SearchBar,
+         ContactScreen,
+         ChannelsScreen
       },
       data() {
          return {
-            content: 'Contacts'
+            content: 'ContactScreen'
          }
       }
    }
@@ -52,15 +63,15 @@
             display: block;
             padding: .6rem 0;
             width: 50%;
+            color: rgba(white, .65);
             text-align: center;
          }
          
          .active {
             border-bottom: 3px solid white;
-            box-shadow: -8px 0 8px $gray;
+            color: white;
          }
       }
-      
    }
    
 </style>
