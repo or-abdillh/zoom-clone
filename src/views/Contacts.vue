@@ -3,16 +3,15 @@
       <div class="title-wrapper">
          <p
          :class="content === 'ContactScreen' ? 'active' : ''"
-         @click="content = 'ContactScreen'" >Contacts</p>
+         @click="[content = 'ContactScreen', placeholder = 'contacts']" >Contacts</p>
          <p 
          :class="content === 'ChannelsScreen' ? 'active' : ''"
-         @click="content = 'ChannelsScreen'" >Channels</p>
+         @click="[content = 'ChannelsScreen', placeholder = 'channels']" >Channels</p>
       </div>
       <i class="fa fa-plus" ></i>
    </section>
-   <SearchBar search-name="Search contacts"></SearchBar>
+   <SearchBar :search-name="'Search ' + placeholder"></SearchBar>
    <component :is="content" ></component>
-   
 </template>
 
 <script>
@@ -31,7 +30,8 @@
       },
       data() {
          return {
-            content: 'ContactScreen'
+            content: 'ContactScreen',
+            placeholder: ''
          }
       }
    }
