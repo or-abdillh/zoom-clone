@@ -7,6 +7,7 @@
          <i class="far fa-edit"></i>
       </template>
    </Header>
+   <NewChat></NewChat>
    <MenuBar></MenuBar>
    <MainScreen></MainScreen>
 </template>
@@ -16,13 +17,15 @@
    import Header from '../components/Header.vue';
    import MenuBar from '../components/MenuBar.vue';
    import MainScreen from '../components/MainScreen.vue';
+   import NewChat from '../components/NewChat.vue';
    
    export default {
       name: 'Home',
       components: {
          Header,
          MenuBar,
-         MainScreen
+         MainScreen,
+         NewChat
       }
    }
    
