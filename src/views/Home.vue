@@ -4,10 +4,10 @@
          <p>Meet & chat</p>
       </template>
       <template v-slot:icon>
-         <i class="far fa-edit"></i>
+         <i @click="isSlide = !isSlide" class="far fa-edit"></i>
       </template>
    </Header>
-   <NewChat></NewChat>
+   <NewChat :slide="isSlide" ></NewChat>
    <MenuBar></MenuBar>
    <MainScreen></MainScreen>
 </template>
@@ -26,6 +26,11 @@
          MenuBar,
          MainScreen,
          NewChat
+      },
+      data() {
+         return {
+            isSlide: false
+         }
       }
    }
    

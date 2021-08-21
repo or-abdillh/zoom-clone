@@ -1,7 +1,7 @@
 <template>
    <section :class="isSlide ? 'slide-up' : ''" class="new-chat">
       <div class="header-chat">
-         <p>Back</p>
+         <p @click="slideDown" >Back</p>
          <p>New chat</p>
          <p>Start a chat</p>
       </div>
@@ -29,6 +29,13 @@
          return {
             isSlide: false
          }
+      },
+      methods: {
+         slideDown() {
+            setTimeout( () => {
+               this.isSlide = !this.isSlide;
+            }, 300)
+         }
       }
    }
    
@@ -51,6 +58,7 @@
       top: 100vh;
       transition: .3s ease-in-out;
       background: $white;
+      user-select: none;
       
       .header-chat {
          width: 100%;
@@ -67,6 +75,11 @@
             &:first-child {
                color: $azure;
                font-weight: 400;
+               transition: .3s;
+               
+               &:active {
+                  color: rgba($azure, .5);
+               }
             }
             
             &:last-child {
