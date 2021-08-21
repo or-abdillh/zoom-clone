@@ -2,11 +2,12 @@
 
 Project cloning UI aplikasi Zoom mobile
 
-<h3>Languages and Tools</h3>
+<h5>Languages and Tools</h5>
+
 - Termux
 - Vite JS
 - Vue JS 3
 - Vue Router 4
 - Font Awesome
 
-<img src="src/assets/banner-zoom.png" width="150" />
+<img src="src/assets/banner-zoom.png" width="100%" />
