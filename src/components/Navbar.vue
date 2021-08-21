@@ -8,10 +8,10 @@
          <i class="far fa-clock"></i>
          <p>Meetings</p>
       </router-link>
-      <a class="nav-box">
+      <router-link to="/contacts" class="nav-box">
          <i class="far fa-address-book"></i>
          <p>Contacts</p>
-      </a>
+      </router-link>
       <a class="nav-box">
          <i class="fas fa-cog"></i>
          <p>Settings</p>

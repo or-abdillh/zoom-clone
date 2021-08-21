@@ -1,5 +1,6 @@
 <template>
    <section class="header">
+      <slot name="custom"></slot>
       <slot name="title"></slot>
       <span>
          <slot name="icon"></slot>
@@ -34,6 +35,11 @@
          position: absolute;
          left: 50%;
          transform: translateX(-50%);
+      }
+      
+      /* Custom */
+      h3 {
+         font-size: 1rem;
       }
       
       span {
